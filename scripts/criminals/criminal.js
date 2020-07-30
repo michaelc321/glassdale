@@ -1,11 +1,11 @@
-export const criminalHTMLConverter = (criminalObj) => {
+export const CriminalHTMLConverter = (criminal) => {
     return `
-    <section class="criminal__card">
-    <h1>${criminalObj.name}</h1>
-    <p>Age: ${criminalObj.age}</p>
-    <p>Crime: ${criminalObj.conviction}</p>
-    <p>Term Start: ${new Date(criminalObj.incarceration.start).toLocaleDateString('en-US')}</p>
-    <p>Term End: ${new Date(criminalObj.incarceration.end).toLocaleDateString('en-US')}</p>
-    </section>
+        <section class="criminal">
+            <h4>${criminal.name}</h4>
+            <div class="criminal__age">Age: ${ criminal.age }</div>
+            <div class="criminal__crime">Crime: ${ criminal.conviction }</div>
+            <div class="criminal__term-start">Term start: ${ new Date(criminal.incarceration.start).toLocaleDateString('en-US') }</div>
+            <div class="criminal__term-end">Term end: ${ new Date(criminal.incarceration.end).toLocaleDateString('en-US') }</div>
+        </section>
     `
 }
